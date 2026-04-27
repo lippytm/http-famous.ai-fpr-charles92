@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Famous.ai – AI-Powered Business Tools | lippytmai.getbizfunds.com</title>
+  <meta name="description" content="Discover Famous.ai – the AI platform transforming how businesses create content, grow their audience, and scale online. Try it today!" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d0d1a;
+      color: #f0f0f0;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    header .brand {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      text-decoration: none;
+    }
+    header nav a {
+      color: #c4b5fd;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(109,40,217,0.35) 0%, transparent 70%);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(139,92,246,0.2);
+      border: 1px solid rgba(139,92,246,0.5);
+      color: #c4b5fd;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 38px;
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.45);
+    }
+    .cta-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+    .cta-sub {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 28px 24px;
+      transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: rgba(139,92,246,0.5); }
+    .feature-icon { font-size: 2rem; margin-bottom: 14px; }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+    .feature-card p  { font-size: 0.9rem; color: #94a3b8; line-height: 1.65; }
+
+    /* ── TESTIMONIAL ── */
+    .testimonial-section {
+      background: rgba(109,40,217,0.1);
+      border-top: 1px solid rgba(139,92,246,0.18);
+      border-bottom: 1px solid rgba(139,92,246,0.18);
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .testimonial-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: left;
+    }
+    .testimonial p { font-size: 0.92rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 14px; }
+    .testimonial .author { font-size: 0.82rem; color: #a78bfa; font-weight: 600; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .cta-section h2 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 1rem;
+      color: #94a3b8;
+      margin-bottom: 32px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.8rem;
+      color: #475569;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer a { color: #7c3aed; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="https://lippytmai.getbizfunds.com">lippytmai.getbizfunds.com</a>
+    <nav>
+      <a href="https://famous.ai?fpr=charles92" target="_blank" rel="noopener">Try Famous.ai →</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge">✨ AI Business Tools</div>
+    <h1>Grow Your Business Faster<br>with <span>Famous.ai</span></h1>
+    <p>
+      Famous.ai gives entrepreneurs and marketers an AI-powered edge —
+      create compelling content, build your brand, and reach more customers
+      in a fraction of the time.
+    </p>
+    <a class="cta-btn" href="https://famous.ai?fpr=charles92" target="_blank" rel="noopener">
+      Get Started with Famous.ai Free →
+    </a>
+    <p class="cta-sub">No credit card required &nbsp;·&nbsp; Start in minutes</p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <h3>AI Content Creation</h3>
+      <p>Generate high-quality blog posts, social media captions, ad copy, and more — all in seconds with Famous.ai's powerful AI engine.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📈</div>
+      <h3>Grow Your Audience</h3>
+      <p>Publish consistently and reach the right audience. Famous.ai helps you craft the right message for every platform and every stage of the funnel.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💡</div>
+      <h3>Business Branding</h3>
+      <p>Build a memorable brand identity with AI-assisted naming, taglines, bios, and visual content ideas tailored to your niche.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Save Time &amp; Money</h3>
+      <p>Replace hours of manual work with intelligent automation. Spend less on freelancers and agencies while producing more professional results.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌐</div>
+      <h3>Multi-Platform Ready</h3>
+      <p>Create content optimized for Instagram, Facebook, TikTok, YouTube, LinkedIn, email newsletters, and your website — all from one place.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Trusted by Thousands</h3>
+      <p>Join a growing community of business owners and content creators who rely on Famous.ai every day to stay ahead of the competition.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonial-section">
+    <h2>What Business Owners Are Saying</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Famous.ai completely changed how I create content for my business. I went from spending 4 hours a week writing to 20 minutes — and the quality is even better."</p>
+        <div class="author">— Digital Marketing Consultant</div>
+      </div>
+      <div class="testimonial">
+        <p>"I was skeptical about AI tools, but Famous.ai delivered real results. My social engagement doubled within the first month of using it consistently."</p>
+        <div class="author">— E-commerce Store Owner</div>
+      </div>
+      <div class="testimonial">
+        <p>"As a small business owner wearing many hats, Famous.ai is like having a full marketing team in my pocket. Worth every penny."</p>
+        <div class="author">— Local Service Business Owner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="cta-section">
+    <h2>Ready to Unlock the Power of AI<br>for Your Business?</h2>
+    <p>Join thousands of entrepreneurs already using Famous.ai to work smarter and grow faster.</p>
+    <a class="cta-btn" href="https://famous.ai?fpr=charles92" target="_blank" rel="noopener">
+      Start Free with Famous.ai Today →
+    </a>
+    <p class="cta-sub" style="margin-top:14px;">Presented by <a href="https://lippytmai.getbizfunds.com" style="color:#a78bfa;">lippytmai.getbizfunds.com</a></p>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 <a href="https://lippytmai.getbizfunds.com">lippytmai.getbizfunds.com</a> &nbsp;|&nbsp;
+      Affiliate partner of <a href="https://famous.ai?fpr=charles92" target="_blank" rel="noopener">Famous.ai</a>
+    </p>
+  </footer>
+
+</body>
+</html>
